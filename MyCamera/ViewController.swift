@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var pictureImage: UIImageView!
     
+    //カメラを起動
     @IBAction func cameraButtonAction(_ sender: Any) {
+        //カメラが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            print("カメラは利用できます")
+        }else{
+            print("カメラは利用できません")
+        }
     }
     
     @IBAction func SNSButtonAction(_ sender: Any) {
