@@ -16,5 +16,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var pictureImage: UIImageView!
+    
+    @IBAction func cameraButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func SNSButtonAction(_ sender: Any) {
+    }
 }
 
